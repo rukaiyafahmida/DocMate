@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="docmate.controller.FXMLDocMateController">
+    <left>
+        <HBox BorderPane.alignment="CENTER">
+            <VBox prefWidth="280.0" spacing="8.0" style="-fx-background-color: #E9E9E9;">
+                <padding>
+                    <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                </padding>
+                <Button fx:id="homeButton" mnemonicParsing="false" prefWidth="264.0" text="Home">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/home_96px.png"/>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="addButton" mnemonicParsing="false" prefWidth="264.0" text="Add">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/add_96px.png"/>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="48.0"/>
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="patientButton" mnemonicParsing="false" prefWidth="264.0" text="Patient">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/recovery_96px.png"/>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="prescriptionButton" mnemonicParsing="false" prefWidth="264.0" text="Prescription">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/treatment_96px.png"/>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="medicineButton" mnemonicParsing="false" prefWidth="264.0" text="Medicine">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/pills_96px.png"/>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="profileButton" mnemonicParsing="false" prefWidth="264.0" text="Profile">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/doctor_96px.png"/>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="settingsButton" mnemonicParsing="false" prefWidth="264.0" text="Settings">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/settings_96px.png"/>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Button>
+            </VBox>
+            <Pane prefWidth="1.0" style="-fx-background-color: #D9D9D9;"/>
+        </HBox>
+    </left>
+    <center>
+        <VBox fx:id="mainContentPane" BorderPane.alignment="CENTER"/>
+    </center>
+    <top>
+        <VBox style="-fx-background-color: #F4F4F4;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="70.0">
+                <HBox alignment="CENTER" layoutY="5.0" prefWidth="280.0">
+                    <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                            <Insets right="8.0"/>
+                        </HBox.margin>
+                        <Image url="@../res/docmate_logo_96px.png"/>
+                    </ImageView>
+                    <Text fill="GREY" strokeType="OUTSIDE" strokeWidth="0.0" text="DocMate">
+                        <font>
+                            <Font name="Lato Bold" size="30.0"/>
+                        </font>
+                    </Text>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="1216.0" layoutY="10.0" AnchorPane.rightAnchor="14.0">
+                    <Pane style="-fx-background-color: #E9E9E9; -fx-background-radius: 30;">
+                        <ImageView fx:id="profileImageButton" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                            <Image url="@../res/doctor_round_96px.png"/>
+                        </ImageView>
+                    </Pane>
+                </HBox>
+            </AnchorPane>
+            <effect>
+                <DropShadow color="SILVER" height="8.0" offsetY="1.0" radius="3.5" width="8.0"/>
+            </effect>
+        </VBox>
+    </top>
+</BorderPane>

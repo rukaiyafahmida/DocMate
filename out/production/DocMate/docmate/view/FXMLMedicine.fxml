@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="docmate.controller.FXMLMedicineController">
+    <BorderPane prefHeight="520.0" prefWidth="924.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <top>
+            <VBox BorderPane.alignment="CENTER">
+                <AnchorPane prefHeight="50.0" style="-fx-background-color: #EEEEEE;">
+                    <ComboBox fx:id="medicineTypeComboBox" layoutX="14.0" layoutY="8.0" prefHeight="34.0"
+                              prefWidth="174.0" AnchorPane.leftAnchor="14.0"/>
+                    <HBox alignment="CENTER" layoutX="202.0" layoutY="8.0" AnchorPane.leftAnchor="202.0"
+                          AnchorPane.rightAnchor="202.0">
+                        <TextField fx:id="searchMedicineTextField" maxWidth="600.0" prefHeight="34.0" prefWidth="600.0"
+                                   promptText="Search medicineBrand in DocMate"/>
+                        <Button fx:id="searchMedicineButton" mnemonicParsing="false">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../res/search_96px.png"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    <Button fx:id="addMedicineButton" layoutX="460.0" layoutY="8.0" mnemonicParsing="false"
+                            prefWidth="160.0" text="Add Medicine" visible="false" AnchorPane.rightAnchor="14.0">
+                        <graphic>
+                            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../res/add_96px.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </AnchorPane>
+                <Pane prefHeight="1.0" style="-fx-background-color: #DDDDDD;"/>
+            </VBox>
+        </top>
+        <bottom>
+            <VBox BorderPane.alignment="CENTER">
+                <Pane prefHeight="1.0" style="-fx-background-color: #DCDCDC;"/>
+                <AnchorPane prefHeight="50.0" style="-fx-background-color: #EEEEEE;">
+                    <HBox alignment="CENTER" layoutX="414.0" layoutY="8.0" spacing="8.0" visible="false"
+                          AnchorPane.leftAnchor="414.0" AnchorPane.rightAnchor="414.0">
+                        <Button mnemonicParsing="false">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../res/back_96px.png"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../res/forward_96px.png"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                </AnchorPane>
+            </VBox>
+        </bottom>
+        <center>
+            <VBox fx:id="medicineContentPane" BorderPane.alignment="CENTER"/>
+        </center>
+    </BorderPane>
+</AnchorPane>

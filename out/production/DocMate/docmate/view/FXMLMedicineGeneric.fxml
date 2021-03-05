@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="520.0" prefWidth="924.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="docmate.controller.FXMLMedicineGenericController">
+    <TableView fx:id="genericMedicineTable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="genericIdColumn" editable="false" minWidth="-1.0" prefWidth="-1.0" text="Generic ID"/>
+            <TableColumn fx:id="genericNameColumn" editable="false" minWidth="-1.0" prefWidth="-1.0"
+                         text="Generic Name"/>
+            <TableColumn fx:id="therapeuticClassColumn" editable="false" minWidth="-1.0" prefWidth="-1.0"
+                         text="Therapeutic Class"/>
+            <TableColumn fx:id="indicationsColumn" editable="false" minWidth="-1.0" prefWidth="-1.0"
+                         text="Indications"/>
+            <TableColumn fx:id="sideEffectsColumn" editable="false" minWidth="-1.0" prefWidth="-1.0"
+                         text="Side Effects"/>
+            <TableColumn fx:id="brandsColumn" editable="false" minWidth="-1.0" prefWidth="-1.0" text="Brands"/>
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+    </TableView>
+</AnchorPane>

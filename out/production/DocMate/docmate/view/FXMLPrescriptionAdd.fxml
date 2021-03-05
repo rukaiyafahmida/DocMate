@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="docmate.controller.FXMLPrescriptionAddController">
+    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="0.0">
+        <top>
+            <VBox BorderPane.alignment="CENTER">
+                <AnchorPane prefHeight="100.0" style="-fx-background-color: #EEEEEE;">
+                    <HBox layoutX="14.0" layoutY="14.0" spacing="8.0" AnchorPane.leftAnchor="16.0">
+                        <TextField fx:id="patientIDField" prefWidth="214.0" promptText="Patient ID"/>
+                        <HBox fx:id="patientInfoPane" spacing="8.0" visible="false">
+                            <HBox.margin>
+                                <Insets left="8.0"/>
+                            </HBox.margin>
+                            <VBox style="-fx-background-color: #FFFFFF; -fx-background-radius: 8;">
+                                <ImageView fx:id="patientImageView" fitHeight="77.0" fitWidth="82.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../res/customer_720px.png"/>
+                                </ImageView>
+                            </VBox>
+                            <VBox>
+                                <Text fx:id="patientName" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name">
+                                    <font>
+                                        <Font size="20.0"/>
+                                    </font>
+                                </Text>
+                                <Text fx:id="patientAge" layoutX="10.0" layoutY="26.0" strokeType="OUTSIDE"
+                                      strokeWidth="0.0" text="Age: 00 Years">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Text>
+                                <Text fx:id="patientSex" layoutX="10.0" layoutY="47.0" strokeType="OUTSIDE"
+                                      strokeWidth="0.0" text="Sex: Male">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Text>
+                            </VBox>
+                        </HBox>
+                    </HBox>
+                </AnchorPane>
+                <Pane prefHeight="1.0" style="-fx-background-color: #DDDDDD;"/>
+            </VBox>
+        </top>
+        <bottom>
+            <VBox BorderPane.alignment="CENTER">
+                <Pane prefHeight="1.0" style="-fx-background-color: #DCDCDC;"/>
+                <AnchorPane prefHeight="50.0" style="-fx-background-color: #EEEEEE;">
+                    <HBox layoutX="906.0" layoutY="10.0" prefHeight="31.0" spacing="8.0" AnchorPane.rightAnchor="14.0">
+                        <Button fx:id="prescriptionCancelButton" mnemonicParsing="false" prefWidth="176.0"
+                                text="Cancel"/>
+                        <Button fx:id="prescriptionSaveButton" mnemonicParsing="false" prefWidth="176.0" text="Save"/>
+                    </HBox>
+                </AnchorPane>
+            </VBox>
+        </bottom>
+        <center>
+            <SplitPane dividerPositions="0.29797979797979796" BorderPane.alignment="CENTER">
+                <AnchorPane maxWidth="520.0" minWidth="240.0">
+                    <VBox spacing="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <padding>
+                            <Insets bottom="8.0" top="8.0"/>
+                        </padding>
+                        <Text layoutX="10.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Symptoms">
+                            <VBox.margin>
+                                <Insets left="8.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="symptomsTextArea" prefHeight="120.0" wrapText="true">
+                            <VBox.margin>
+                                <Insets bottom="4.0"/>
+                            </VBox.margin>
+                        </TextArea>
+                        <Text layoutX="10.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Observation">
+                            <VBox.margin>
+                                <Insets left="8.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="observationTextArea" layoutX="10.0" layoutY="10.0" prefHeight="120.0"
+                                  wrapText="true">
+                            <VBox.margin>
+                                <Insets bottom="4.0"/>
+                            </VBox.margin>
+                        </TextArea>
+                        <Text layoutX="10.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tests">
+                            <VBox.margin>
+                                <Insets left="8.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="testsTextArea" layoutX="10.0" layoutY="110.0" prefHeight="120.0"
+                                  wrapText="true">
+                            <VBox.margin>
+                                <Insets bottom="4.0"/>
+                            </VBox.margin>
+                        </TextArea>
+                        <Text layoutX="10.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnosis">
+                            <VBox.margin>
+                                <Insets left="8.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="diagnosisTextArea" layoutX="10.0" layoutY="210.0" prefHeight="120.0"
+                                  wrapText="true">
+                            <VBox.margin>
+                                <Insets bottom="4.0"/>
+                            </VBox.margin>
+                        </TextArea>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Advice">
+                            <VBox.margin>
+                                <Insets left="8.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="adviceTextArea" layoutX="10.0" layoutY="286.0" prefHeight="120.0"
+                                  wrapText="true">
+                            <VBox.margin>
+                                <Insets bottom="4.0"/>
+                            </VBox.margin>
+                        </TextArea>
+                        <Text layoutX="10.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visit again">
+                            <VBox.margin>
+                                <Insets left="8.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <TextField fx:id="visitAgainTextField"/>
+                    </VBox>
+                </AnchorPane>
+                <AnchorPane>
+                    <VBox spacing="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                          AnchorPane.topAnchor="0.0">
+                        <padding>
+                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                        </padding>
+                        <HBox layoutX="10.0" layoutY="10.0" maxWidth="736.0" prefWidth="736.0">
+                            <VBox.margin>
+                                <Insets bottom="8.0"/>
+                            </VBox.margin>
+                            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                <HBox.margin>
+                                    <Insets/>
+                                </HBox.margin>
+                                <Image url="@../res/rx_96px.png"/>
+                            </ImageView>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="736.0" prefHeight="31.0" prefWidth="736.0"
+                              style="-fx-background-color: #E9E9E9; -fx-background-radius: 8;">
+                            <VBox.margin>
+                                <Insets bottom="8.0"/>
+                            </VBox.margin>
+                            <effect>
+                                <DropShadow color="SILVER" height="4.0" offsetY="1.0" radius="1.5" width="4.0"/>
+                            </effect>
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine">
+                                <font>
+                                    <Font name="System Bold" size="15.0"/>
+                                </font>
+                            </Text>
+                        </HBox>
+                        <VBox maxWidth="736.0" prefWidth="736.0" spacing="8.0">
+                            <VBox.margin>
+                                <Insets bottom="8.0"/>
+                            </VBox.margin>
+                            <HBox spacing="8.0">
+                                <TextField fx:id="medicineTypeField" editable="true" prefWidth="240.0"
+                                           promptText="Medicine Type"/>
+                                <TextField fx:id="medicineNameField" editable="true" prefWidth="240.0"
+                                           promptText="Medicine Name"/>
+                                <TextField fx:id="medicineStrengthField" editable="true" layoutX="160.0"
+                                           layoutY="10.0" prefWidth="240.0" promptText="Strength"/>
+                            </HBox>
+                            <HBox layoutX="10.0" layoutY="10.0" spacing="8.0">
+                                <TextField fx:id="medicineDosageTextField" prefWidth="364.0" promptText="Dosage"/>
+                                <TextField fx:id="medicineDurationTextField" layoutX="10.0" layoutY="10.0"
+                                           prefWidth="364.0" promptText="Duration"/>
+                            </HBox>
+                            <HBox layoutX="10.0" layoutY="41.0" spacing="8.0">
+                                <TextField fx:id="medicineAdviceTextField" prefWidth="736.0" promptText="Advice"/>
+                            </HBox>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" maxWidth="736.0" prefWidth="736.0" spacing="8.0">
+                            <Button fx:id="medicineClearButton" mnemonicParsing="false" prefWidth="176.0" text="Clear"/>
+                            <Button fx:id="medicineAddButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false"
+                                    prefWidth="176.0" text="Add"/>
+                        </HBox>
+                    </VBox>
+                    <VBox alignment="BOTTOM_CENTER" layoutY="280.0" AnchorPane.bottomAnchor="0.0"
+                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="290.0">
+                        <TableView fx:id="medicineTableView" prefHeight="480.0">
+                            <columns>
+                                <TableColumn fx:id="medicineNumberColumn" prefWidth="75.0" text="#"/>
+                                <TableColumn fx:id="medicineTypeColumn" prefWidth="75.0" text="Medicine Type"/>
+                                <TableColumn fx:id="medicineNameColumn" prefWidth="75.0" text="Medicine Name"/>
+                                <TableColumn fx:id="medicineStrengthColumn" prefWidth="75.0" text="Strength"/>
+                                <TableColumn fx:id="medicineDosageColumn" prefWidth="75.0" text="Dosage"/>
+                                <TableColumn fx:id="medicineDurationColumn" prefWidth="75.0" text="Duration"/>
+                                <TableColumn fx:id="medicineAdviceColumn" prefWidth="75.0" text="Advice"/>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+                    </VBox>
+                </AnchorPane>
+            </SplitPane>
+        </center>
+    </BorderPane>
+</AnchorPane>
