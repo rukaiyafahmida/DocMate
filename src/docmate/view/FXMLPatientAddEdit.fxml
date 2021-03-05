@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="docmate.controller.FXMLPatientAddEditController">
+    <right>
+        <AnchorPane prefHeight="620.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER_RIGHT" layoutX="79.0" layoutY="75.0">
+                <VBox alignment="CENTER">
+                    <HBox alignment="CENTER">
+                        <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/user_96px.png"/>
+                            <HBox.margin>
+                                <Insets right="8.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="patientNameField" prefHeight="31.0" prefWidth="422.0" promptText="Name"/>
+                    </HBox>
+                    <HBox fx:id="patientNameError" alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="123.0"
+                          visible="false">
+                        <VBox.margin>
+                            <Insets left="42.0"/>
+                        </VBox.margin>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="8.0" right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/high_importance_96px.png"/>
+                        </ImageView>
+                        <Text fx:id="patientNameErrorText" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Text>
+                    </HBox>
+                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                        <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/calendar_96px.png"/>
+                        </ImageView>
+                        <DatePicker fx:id="patientDOBPicker" prefWidth="422.0" promptText="Date of Birth (MM/DD/YYYY)"/>
+                    </HBox>
+                    <HBox fx:id="patientDOBError" alignment="CENTER_LEFT" layoutX="52.0" layoutY="43.0"
+                          prefHeight="19.0" prefWidth="123.0" visible="false">
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="8.0" right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/high_importance_96px.png"/>
+                        </ImageView>
+                        <Text fx:id="patientDOBErrorText" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Text>
+                        <VBox.margin>
+                            <Insets left="42.0"/>
+                        </VBox.margin>
+                    </HBox>
+                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                        <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/male_and_female_96px.png"/>
+                        </ImageView>
+                        <ComboBox fx:id="patientSexComboBox" prefWidth="422.0" promptText="Sex"/>
+                    </HBox>
+                    <HBox fx:id="patientSexError" alignment="CENTER_LEFT" layoutX="52.0" layoutY="43.0"
+                          prefHeight="19.0" prefWidth="123.0" visible="false">
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="8.0" right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/high_importance_96px.png"/>
+                        </ImageView>
+                        <Text fx:id="patientSexErrorText" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Text>
+                        <VBox.margin>
+                            <Insets left="42.0"/>
+                        </VBox.margin>
+                    </HBox>
+                    <HBox alignment="CENTER">
+                        <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/phone_96px.png"/>
+                        </ImageView>
+                        <TextField fx:id="patientPhoneField" prefHeight="31.0" prefWidth="422.0" promptText="Phone"/>
+                    </HBox>
+                    <HBox fx:id="patientPhoneError" alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="123.0"
+                          visible="false">
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="8.0" right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/high_importance_96px.png"/>
+                        </ImageView>
+                        <Text fx:id="patientPhoneErrorText" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Text>
+                        <VBox.margin>
+                            <Insets left="42.0"/>
+                        </VBox.margin>
+                    </HBox>
+                    <HBox alignment="CENTER">
+                        <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../res/email_96px.png"/>
+                            <HBox.margin>
+                                <Insets right="8.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="patientEmailField" prefHeight="31.0" prefWidth="422.0" promptText="Email"/>
+                    </HBox>
+                    <HBox fx:id="patientEmailError" alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="123.0"
+                          visible="false">
+                        <VBox.margin>
+                            <Insets left="42.0"/>
+                        </VBox.margin>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="8.0" right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/high_importance_96px.png"/>
+                        </ImageView>
+                        <Text fx:id="patientEmailErrorText" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Text>
+                    </HBox>
+                    <HBox alignment="CENTER" layoutX="10.0" layoutY="114.0">
+                        <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/address_96px.png"/>
+                        </ImageView>
+                        <TextField fx:id="patientAddressField" prefHeight="31.0" prefWidth="422.0"
+                                   promptText="Address"/>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" layoutX="52.0" layoutY="147.0" prefHeight="19.0" prefWidth="123.0"
+                          visible="false">
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="8.0" right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/high_importance_96px.png"/>
+                        </ImageView>
+                        <Text fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Text>
+                        <VBox.margin>
+                            <Insets left="42.0"/>
+                        </VBox.margin>
+                    </HBox>
+                    <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="270.0">
+                        <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/note_96px.png"/>
+                        </ImageView>
+                        <TextArea fx:id="patientCommentsArea" prefHeight="100.0" prefWidth="422.0" promptText="Comments"
+                                  wrapText="true"/>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="303.0" prefHeight="19.0" prefWidth="123.0"
+                          visible="false">
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="8.0" right="8.0"/>
+                            </HBox.margin>
+                            <Image url="@../res/high_importance_96px.png"/>
+                        </ImageView>
+                        <Text fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Text>
+                        <VBox.margin>
+                            <Insets left="42.0"/>
+                        </VBox.margin>
+                    </HBox>
+                    <VBox.margin>
+                        <Insets bottom="8.0"/>
+                    </VBox.margin>
+                </VBox>
+                <Button fx:id="saveOrUpdatePatientButton" mnemonicParsing="false" prefWidth="211.0" text="Save"/>
+            </VBox>
+        </AnchorPane>
+    </right>
+    <top>
+        <AnchorPane prefHeight="100.0" style="-fx-background-color: #E9E9E9;">
+            <HBox alignment="CENTER" layoutX="205.0" layoutY="28.0" prefHeight="45.0" prefWidth="211.0">
+                <Text fx:id="titleText" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Patient">
+                    <font>
+                        <Font size="30.0"/>
+                    </font>
+                </Text>
+            </HBox>
+            <ProgressIndicator fx:id="savePatientProgress" layoutX="408.0" layoutY="34.0" prefHeight="33.0"
+                               prefWidth="33.0" visible="false"/>
+        </AnchorPane>
+    </top>
+</BorderPane>

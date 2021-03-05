@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<HBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="docmate.controller.FXMLRegisterController">
+    <AnchorPane prefHeight="520.0" prefWidth="308.0" style="-fx-background-color: #E9E9E9;">
+        <ImageView fitHeight="135.0" fitWidth="135.0" layoutX="87.0" layoutY="177.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@../res/docmate_logo_720px.png"/>
+        </ImageView>
+        <Text fill="GREY" layoutX="104.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DocMate">
+            <font>
+                <Font name="Lato Bold" size="24.0"/>
+            </font>
+        </Text>
+    </AnchorPane>
+    <AnchorPane prefHeight="520.0" prefWidth="616.0">
+        <Text layoutX="243.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register">
+            <font>
+                <Font size="36.0"/>
+            </font>
+        </Text>
+        <ProgressIndicator fx:id="registerProgressIndicator" layoutX="385.0" layoutY="104.0" prefHeight="33.0"
+                           prefWidth="33.0" visible="false"/>
+        <VBox alignment="CENTER_RIGHT" layoutX="77.0" layoutY="182.0">
+            <VBox alignment="CENTER">
+                <HBox alignment="CENTER">
+                    <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../res/doctor_96px.png"/>
+                        <HBox.margin>
+                            <Insets right="8.0"/>
+                        </HBox.margin>
+                    </ImageView>
+                    <TextField fx:id="registerNameField" prefHeight="31.0" prefWidth="422.0" promptText="Name"/>
+                </HBox>
+                <HBox fx:id="registerNameError" alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="123.0"
+                      visible="false">
+                    <VBox.margin>
+                        <Insets left="42.0"/>
+                    </VBox.margin>
+                    <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                            <Insets left="8.0" right="8.0"/>
+                        </HBox.margin>
+                        <Image url="@../res/high_importance_96px.png"/>
+                    </ImageView>
+                    <Text fx:id="registerNameErrorText" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </Text>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../res/email_96px.png"/>
+                        <HBox.margin>
+                            <Insets right="8.0"/>
+                        </HBox.margin>
+                    </ImageView>
+                    <TextField fx:id="registerEmailField" prefHeight="31.0" prefWidth="422.0" promptText="Email"/>
+                </HBox>
+                <HBox fx:id="registerEmailError" alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="123.0"
+                      visible="false">
+                    <VBox.margin>
+                        <Insets left="42.0"/>
+                    </VBox.margin>
+                    <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                            <Insets left="8.0" right="8.0"/>
+                        </HBox.margin>
+                        <Image url="@../res/high_importance_96px.png"/>
+                    </ImageView>
+                    <Text fx:id="registerEmailErrorText" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </Text>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../res/key_96px.png"/>
+                        <HBox.margin>
+                            <Insets right="8.0"/>
+                        </HBox.margin>
+                    </ImageView>
+                    <PasswordField fx:id="registerPasswordField" prefHeight="31.0" prefWidth="422.0"
+                                   promptText="Password"/>
+                </HBox>
+                <HBox fx:id="registerPasswordError" alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="123.0"
+                      visible="false">
+                    <VBox.margin>
+                        <Insets left="42.0"/>
+                    </VBox.margin>
+                    <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                            <Insets left="8.0" right="8.0"/>
+                        </HBox.margin>
+                        <Image url="@../res/high_importance_96px.png"/>
+                    </ImageView>
+                    <Text fx:id="registerPasswordErrorText" fill="#fc0000" strokeType="OUTSIDE" strokeWidth="0.0">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </Text>
+                </HBox>
+                <VBox.margin>
+                    <Insets bottom="8.0"/>
+                </VBox.margin>
+            </VBox>
+            <Button fx:id="registerButton" mnemonicParsing="false" prefWidth="211.0" text="Register"/>
+        </VBox>
+        <Hyperlink fx:id="openLoginLink" focusTraversable="false" layoutX="239.0" layoutY="470.0"
+                   style="-fx-underline: false;" text="Already registered?" visited="true"/>
+    </AnchorPane>
+</HBox>
